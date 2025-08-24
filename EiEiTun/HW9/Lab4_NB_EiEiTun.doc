@@ -1,0 +1,13 @@
+1. Differences Between the Three Naive Bayes Classifiers
+GaussianNB:Assumes that features follow a normal (Gaussian) distribution. Suitable for continuous data.
+MultinomialNB:Designed for count-based or discrete data (e.g., word counts in text classification).
+BernoulliNB:Designed for binary/boolean features. Models the presence or absence of a feature rather than its count.
+2. Precision and Recall Comparison
+GaussianNB has high recall (0.86) for fraudulent transactions (Class 1), meaning it catches most fraud cases.
+MultinomialNB fails to detect fraud (recall = 0), despite slightly higher overall accuracy.
+BernoulliNB achieves high precision (0.93) and decent recall (0.73), balancing false positives and detection.
+3. Model Choice for Fraud DetectionIn fraud detection, the main priority is to detect as many fraudulent transactions as possible (high recall), while keeping false alarms reasonable.
+GaussianNB is strong in recall (0.86) but has lower precision (0.38), meaning more false positives.
+BernoulliNB provides a good balance: high precision (0.93) and reasonably high recall (0.73), reducing false positives while still catching most fraud.
+MultinomialNB is not suitable for this dataset as it fails to detect fraud.
+BernoulliNB is the recommended model for fraud detection in this case because it balances precision and recall effectively, making it reliable for practical use.
